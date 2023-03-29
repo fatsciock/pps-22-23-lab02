@@ -22,6 +22,7 @@ object es2b extends App:
   println("Test compose")
 
   def compose(f: Int => Int, g: Int => Int): Int => Int = x => f(g(x))
+
   println(compose(_ - 1, _ * 2)(5))
 
   def composeGen[X](f: X => X, g: X => X): X => X = x => f(g(x))
